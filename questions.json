@@ -1,0 +1,356 @@
+[
+    {
+      "question": "1. Which of the following relational algebra expressions are valid?",
+      "options": [
+        {"text": "σ(price > 100)(Products)", "correct": true},
+        {"text": "Π(name, city)(Orders)", "correct": false},
+        {"text": "Users ÷ Orders", "correct": false},
+        {"text": "ρ(City/city)(σ(city = 'London')(Users))", "correct": true},
+        {"text": "Π(name)(σ(Users.city = Orders.city)(Users × Orders))", "correct": true}
+      ]
+    },
+    {
+      "question": "2. Given the relations R1(userId): {U1, U2, U3} and R2(userId): {U2, U3, U4}, which of the following are correct results based on set operators?",
+      "options": [
+        {"text": "R1 ∪ R2 = {U1, U2, U3, U4}", "correct": true},
+        {"text": "R1 ∩ R2 = {U2, U3, U4}", "correct": false},
+        {"text": "R1 - R2 = {U1}", "correct": true},
+        {"text": "R2 - R1 = {U4}", "correct": true},
+        {"text": "R1 × R2 includes 12 tuples.", "correct": true}
+      ]
+    },
+    {
+      "question": "3. Given the relations Users(userId, name, city) and Orders(userId, productId, amount), which of the following statements about the natural join Users ⋈ Orders are correct?",
+      "options": [
+        {"text": "The result will include all columns from both relations without duplication.", "correct": true},
+        {"text": "The result will only include rows where Users.userId = Orders.userId.", "correct": true},
+        {"text": "The result will include unmatched rows with nulls (similar to an outer join).", "correct": false},
+        {"text": "The result's schema will contain {userId, name, city, productId, amount}", "correct": true},
+        {"text": "The natural join is equivalent to σ(Users.userId = Orders.userId)(Users × Orders)", "correct": true}
+      ]
+    },
+    {
+      "question": "4. Given the relations Orders(userId, productId) and Products(productId), which of the following statements about Orders ÷ Products are correct?",
+      "options": [
+        {"text": "It returns all userId who have ordered every product.", "correct": true},
+        {"text": "It requires the schema of Products to be a subset of Orders.", "correct": true},
+        {"text": "If a productId is missing from Orders, no userId will be in the result.", "correct": true},
+        {"text": "Orders ÷ Products is equivalent to Π(userId)(Orders)", "correct": false},
+        {"text": "Division operator is directly supported in SQL.", "correct": false}
+      ]
+    },
+    {
+      "question": "5. Given the relation Orders(userId, productId, amount), which of the following are valid uses of aggregation in relational algebra?",
+      "options": [
+        {"text": "γ(userId, SUM(amount))(Orders)", "correct": true},
+        {"text": "γ(MAX(productId))(Orders)", "correct": false},
+        {"text": "γ(userId, AVG(amount))(Orders)", "correct": true},
+        {"text": "γ(SUM(userId))(Orders)", "correct": false},
+        {"text": "γ(COUNT(*))(Orders)", "correct": true}
+      ]
+    },
+
+    {
+      "question": "6. What are valid uses of SQL Data Definition Language (DDL)?",
+      "options": [
+        {"text": "Creating database tables", "correct": true},
+        {"text": "Modifying database records", "correct": false},
+        {"text": "Dropping tables", "correct": true},
+        {"text": "Defining primary and foreign keys", "correct": true},
+        {"text": "Querying data with SELECT", "correct": false}
+      ]
+    },
+    {
+      "question": "7. Which of the following are valid aggregate functions in SQL?",
+      "options": [
+        {"text": "COUNT", "correct": true},
+        {"text": "AVG", "correct": true},
+        {"text": "SUM", "correct": true},
+        {"text": "CONCAT", "correct": false},
+        {"text": "MAX", "correct": true}
+      ]
+    },
+    {
+      "question": "8. Which constraints can be applied to a table in SQL?",
+      "options": [
+        {"text": "UNIQUE", "correct": true},
+        {"text": "CHECK", "correct": true},
+        {"text": "DEFAULT", "correct": true},
+        {"text": "FOREIGN KEY", "correct": true},
+        {"text": "TRUNCATE", "correct": false}
+      ]
+    },
+    {
+      "question": "9. Which SQL commands are part of Data Manipulation Language (DML)?",
+      "options": [
+        {"text": "INSERT", "correct": true},
+        {"text": "UPDATE", "correct": true},
+        {"text": "DELETE", "correct": true},
+        {"text": "SELECT", "correct": false},
+        {"text": "CREATE", "correct": false}
+      ]
+    },
+    {
+      "question": "10. What are valid uses of the WHERE clause in an SQL SELECT statement?",
+      "options": [
+        {"text": "Filtering rows based on conditions", "correct": true},
+        {"text": "Filtering rows after grouping", "correct": false},
+        {"text": "Combining multiple conditions with AND/OR", "correct": true},
+        {"text": "Sorting the rows returned", "correct": false},
+        {"text": "Using operators like BETWEEN, IN, or LIKE", "correct": true}
+      ]
+    },
+    {
+      "question": "11. Which of the following are types of joins in SQL?",
+      "options": [
+        {"text": "INNER JOIN", "correct": true},
+        {"text": "OUTER JOIN", "correct": true},
+        {"text": "CARTESIAN JOIN", "correct": false},
+        {"text": "UNION JOIN", "correct": false},
+        {"text": "NATURAL JOIN", "correct": true}
+      ]
+    },
+    {
+      "question": "13. Which features are supported by SQL GROUP BY?",
+      "options": [
+        {"text": "Grouping rows by specific attributes", "correct": true},
+        {"text": "Applying aggregate functions to each group", "correct": true},
+        {"text": "Filtering groups using HAVING", "correct": true},
+        {"text": "Joining grouped data", "correct": false},
+        {"text": "Returning all rows without grouping", "correct": false}
+      ]
+    },
+    {
+      "question": "14. What are valid uses of the SELECT statement in SQL?",
+      "options": [
+        {"text": "Retrieving specific columns", "correct": true},
+        {"text": "Joining tables", "correct": true},
+        {"text": "Applying filters with WHERE", "correct": true},
+        {"text": "Modifying data in a table", "correct": false},
+        {"text": "Performing aggregations", "correct": true}
+      ]
+    },
+    {
+      "question": "15. Which of the following operators can be used in SQL queries?",
+      "options": [
+        {"text": "EXISTS", "correct": true},
+        {"text": "IN", "correct": true},
+        {"text": "ALL", "correct": true},
+        {"text": "ANY", "correct": true},
+        {"text": "DISTINCT", "correct": true}
+      ]
+    },
+    {
+      "question": "16. What are key features of SQL views?",
+      "options": [
+        {"text": "Can be created using SELECT statements", "correct": true},
+        {"text": "Allow aggregation of data", "correct": true},
+        {"text": "Improve CPU performance and storage efficiency", "correct": true},
+        {"text": "Can be used to modify underlying data directly", "correct": false},
+        {"text": "Provide a virtual table representation", "correct": true}
+      ]
+    },
+    {
+      "question": "17. Which of the following are valid types of stored objects in SQL?",
+      "options": [
+        {"text": "Stored Procedures", "correct": true},
+        {"text": "Triggers", "correct": true},
+        {"text": "Views", "correct": false},
+        {"text": "Cursors", "correct": true},
+        {"text": "Indexes", "correct": false}
+      ]
+    },
+    {
+      "question": "18. What are valid uses of SQL stored procedures?",
+      "options": [
+        {"text": "Implementing business logic", "correct": true},
+        {"text": "Returning multiple rows as a result set", "correct": true},
+        {"text": "Direct invocation using CALL", "correct": true},
+        {"text": "Being invoked from a SELECT statement", "correct": false},
+        {"text": "Updating database records", "correct": true}
+      ]
+    },
+    {
+      "question": "19. Which of the following statements about SQL functions are correct?",
+      "options": [
+        {"text": "Functions return a value", "correct": true},
+        {"text": "Functions can include SELECT statements", "correct": true},
+        {"text": "Functions can include DML statements like UPDATE", "correct": false},
+        {"text": "Functions can be invoked inside procedures", "correct": true},
+        {"text": "Functions are invoked with CALL", "correct": false}
+      ]
+    },
+    {
+      "question": "20. Which events can trigger SQL triggers?",
+      "options": [
+        {"text": "INSERT", "correct": true},
+        {"text": "DELETE", "correct": true},
+        {"text": "UPDATE", "correct": true},
+        {"text": "SELECT", "correct": false},
+        {"text": "MERGE", "correct": false}
+      ]
+    },
+    {
+      "question": "21. What are the special words available in SQL triggers?",
+      "options": [
+        {"text": "new", "correct": true},
+        {"text": "old", "correct": true},
+        {"text": "current", "correct": false},
+        {"text": "updated", "correct": false},
+        {"text": "inserted", "correct": false}
+      ]
+    },
+    {
+      "question": "22. Which of the following are valid features of SQL cursors?",
+      "options": [
+        {"text": "They iterate over rows from a SELECT statement", "correct": true},
+        {"text": "They are read-only", "correct": true},
+        {"text": "They can modify data", "correct": false},
+        {"text": "They must be explicitly opened and closed", "correct": true},
+        {"text": "They can fetch multiple rows at once", "correct": false}
+      ]
+    },
+    {
+      "question": "23. Which are valid uses of compound statements in SQL?",
+      "options": [
+        {"text": "Declaring variables", "correct": true},
+        {"text": "Using loops", "correct": true},
+        {"text": "Handling conditions with IF or CASE", "correct": true},
+        {"text": "Returning multiple rows directly", "correct": false},
+        {"text": "Defining database schemas", "correct": false}
+      ]
+    },
+    {
+      "question": "24. What are valid parts of SQL trigger syntax?",
+      "options": [
+        {"text": "trigger_time (BEFORE or AFTER)", "correct": true},
+        {"text": "trigger_event (INSERT, UPDATE, DELETE)", "correct": true},
+        {"text": "trigger_action (SELECT or JOIN)", "correct": false},
+        {"text": "PRECEDES or FOLLOWS clauses", "correct": true},
+        {"text": "WHERE clause", "correct": false}
+      ]
+    },
+    {
+      "question": "25. Which statements about exception handling in SQL compound statements are correct?",
+      "options": [
+        {"text": "DECLARE HANDLER can handle errors", "correct": true},
+        {"text": "NOT FOUND can handle empty results from a SELECT statement", "correct": true},
+        {"text": "RESIGNAL can re-throw an exception", "correct": true},
+        {"text": "SIGNAL can catch exceptions", "correct": false},
+        {"text": "Handlers must be declared inside a BEGIN-END block", "correct": true}
+      ]
+    },
+    {
+      "question": "26. Which of the following are valid examples of SQL business rules implemented with triggers?",
+      "options": [
+        {"text": "Restricting the number of employees in a department", "correct": true},
+        {"text": "Preventing employees from being their own boss", "correct": true},
+        {"text": "Automatically setting default start dates", "correct": true},
+        {"text": "Generating unique primary keys", "correct": false},
+        {"text": "Validating SELECT queries", "correct": false}
+      ]
+    },
+    {
+      "question": "26. Which of the following are properties of ACID transactions?",
+      "options": [
+        {"text": "Atomicity", "correct": true},
+        {"text": "Consistency", "correct": true},
+        {"text": "Isolation", "correct": true},
+        {"text": "Durability", "correct": true},
+        {"text": "Efficiency", "correct": false}
+      ]
+    },
+    {
+      "question": "28. What are valid steps in the transaction pattern?",
+      "options": [
+        {"text": "START TRANSACTION", "correct": true},
+        {"text": "COMMIT", "correct": true},
+        {"text": "ROLLBACK", "correct": true},
+        {"text": "LOCK TABLES", "correct": false},
+        {"text": "SAVEPOINT", "correct": false}
+      ]
+    },
+    {
+      "question": "29. Which of the following statements about transaction synchronization points are correct?",
+      "options": [
+        {"text": "Commit marks the changes as consistent.", "correct": true},
+        {"text": "Rollback undoes changes to reach the initial state.", "correct": true},
+        {"text": "Synchronization points define the state of a transaction.", "correct": true},
+        {"text": "Intermediate states are always consistent.", "correct": false},
+        {"text": "Commit guarantees isolation of transactions.", "correct": false}
+      ]
+    },
+    {
+      "question": "30. Which concurrency problems can occur in databases?",
+      "options": [
+        {"text": "Lost Update", "correct": true},
+        {"text": "Dirty Read", "correct": true},
+        {"text": "Non-repeatable Read", "correct": true},
+        {"text": "Phantom Read", "correct": true},
+        {"text": "Deadlock", "correct": false}
+      ]
+    },
+    {
+      "question": "31. What are valid isolation levels in SQL92?",
+      "options": [
+        {"text": "READ UNCOMMITTED", "correct": true},
+        {"text": "READ COMMITTED", "correct": true},
+        {"text": "REPEATABLE READ", "correct": true},
+        {"text": "SERIALIZABLE", "correct": true},
+        {"text": "WRITE LOCKED", "correct": false}
+      ]
+    },
+    {
+      "question": "32. Which strategies can be used to ensure concurrency control?",
+      "options": [
+        {"text": "Two Phase Lock Protocol (2PL)", "correct": true},
+        {"text": "Timestamp-based protocols", "correct": true},
+        {"text": "Multiversion concurrency control", "correct": true},
+        {"text": "Validation-based protocols", "correct": true},
+        {"text": "Deadlock Avoidance Algorithm", "correct": false}
+      ]
+    },
+    {
+      "question": "7. Which of the following are true about Two Phase Lock Protocol (2PL)?",
+      "options": [
+        {"text": "It has a growing phase where locks are acquired.", "correct": true},
+        {"text": "It has a shrinking phase where locks are released.", "correct": true},
+        {"text": "It prevents deadlocks completely.", "correct": false},
+        {"text": "It allows both shared and exclusive locks.", "correct": true},
+        {"text": "Locks are automatically released after COMMIT.", "correct": false}
+      ]
+    },
+    {
+      "question": "33. What are valid failure recovery methods in database systems?",
+      "options": [
+        {"text": "Cold Recovery for hardware failures", "correct": true},
+        {"text": "Warm Recovery for software failures", "correct": true},
+        {"text": "Redo for completed transactions not in disk", "correct": true},
+        {"text": "Undo for incomplete transactions", "correct": true},
+        {"text": "Checkpoint for clearing logs", "correct": false}
+      ]
+    },
+    {
+      "question": "34. What are correct outcomes for transactions with AUTOCOMMIT enabled?",
+      "options": [
+        {"text": "Each statement is automatically committed.", "correct": true},
+        {"text": "Constraints are enforced immediately.", "correct": true},
+        {"text": "ROLLBACK is not allowed.", "correct": false},
+        {"text": "Dirty pages are immediately written to disk.", "correct": true},
+        {"text": "Transactions must still be explicitly committed.", "correct": false}
+      ]
+    },
+    {
+      "question": "35. Which conditions must be satisfied for a transaction to be serializable?",
+      "options": [
+        {"text": "The concurrent schedule must have the same effect as a sequential schedule.", "correct": true},
+        {"text": "All transactions must acquire exclusive locks.", "correct": false},
+        {"text": "There should be no conflicting operations between transactions.", "correct": true},
+        {"text": "The DBMS must use 2PL or equivalent protocols.", "correct": true},
+        {"text": "Transactions must run sequentially.", "correct": false}
+      ]
+    }
+  ]
+  
+  
+  

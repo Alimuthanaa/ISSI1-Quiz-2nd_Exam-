@@ -1,0 +1,97 @@
+/* Feedback Styles */
+#feedback.correct {
+    color: #2e7d32; /* Softer green */
+    background-color: #e8f5e9; /* Light green background */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#feedback.incorrect {
+    color: #c62828; /* Softer red */
+    background-color: #ffebee; /* Light red background */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#feedback.partial {
+    color: #f9a825; /* Warm yellow */
+    background-color: #fff8e1; /* Light yellow background */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#feedback.warning {
+    color: #f57c00; /* Softer orange */
+    background-color: #fff3e0; /* Light orange background */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Checkbox Styling */
+label[style*="color: green"] {
+    color: #2e7d32; /* Softer green */
+    font-weight: bold;
+}
+
+label[style*="color: red"] {
+    color: #c62828; /* Softer red */
+    font-weight: bold;
+}
+
+input[type="checkbox"][style*="outline: 2px solid green"] {
+    outline: 2px solid #81c784; /* Light green */
+    outline-offset: 2px;
+    background-color: rgba(129, 199, 132, 0.2); /* Light green overlay */
+}
+
+input[type="checkbox"][style*="outline: 2px solid red"] {
+    outline: 2px solid #e57373; /* Light red */
+    outline-offset: 2px;
+    background-color: rgba(229, 115, 115, 0.2); /* Light red overlay */
+}
+
+/* Summary Styling */
+#summary {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #616161; /* Neutral gray */
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.quiz-box {
+    background-color: #f8f2f2; /* White background for the box */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Space inside the box */
+    margin: 20px auto; /* Center the box with margins */
+    max-width: 800px; /* Limit the width of the box */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333; /* Darker gray for the heading */
+}
+
+#quiz-container {
+    margin-top: 20px;
+}
+
+/* Additional styles for feedback and summary if needed */
+#feedback {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1.1em;
+    text-align: left;
+    border-radius: 5px;
+}
